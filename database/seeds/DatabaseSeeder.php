@@ -11,10 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $users = factory(App\User::class,5)->create();
-        $users->each(function($user){
-            factory(App\Post::class,3)->create(["user_id"=>$user->id]);
+        $users = factory(App\User::class, 15)->create();
+        $users->each(function ($user) {
+            factory(App\Post::class, 3)->create(['user_id' => $user->id]);
         });
-
     }
 }

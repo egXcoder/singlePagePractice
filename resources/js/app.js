@@ -26,6 +26,7 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+/*setting up routes*/
 import vueRouter from 'vue-router';
 Vue.use(vueRouter);
 
@@ -43,6 +44,10 @@ const router = new vueRouter({
     ],
     mode:'history',
 });
+
+/*registering Components*/
+var Paginate = require('vuejs-paginate')
+Vue.component('paginate', Paginate)
 
 const app = new Vue({
     el: '#app',
